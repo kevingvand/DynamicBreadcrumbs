@@ -1,0 +1,22 @@
+﻿@model DynamicBreadcrumbs.Models.Project
+@{
+    ViewBag.Title = "Project";
+}
+
+@if (Model == null)
+{
+    <h2>Project with the specified ID was not found!</h2>
+}
+else
+{
+    <h2>Project: @Model.Name (@Model.Id)</h2>
+
+    <ul>
+        @foreach (var domain in Model.Domains)
+        {
+            <li>
+                <a href="/projects/@Model.Id/@domain.Id">@domain.Name</a>
+            </li>
+        }
+    </ul>
+}

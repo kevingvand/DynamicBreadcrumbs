@@ -1,0 +1,15 @@
+﻿@model DynamicBreadcrumbs.Models.Domain
+
+@{
+    ViewBag.Title = "Domain";
+}
+
+@if(Model == null)
+{
+    <h2>Model with the specified ID was not found!</h2>
+} else
+{
+   <h2>Domain: @Model.Name (@Model.Id)</h2>
+}
+
+

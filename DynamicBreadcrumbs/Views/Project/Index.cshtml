@@ -1,0 +1,16 @@
+﻿@model ICollection<DynamicBreadcrumbs.Models.Project>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Projects</h2>
+
+<ul>
+    @foreach (var project in Model)
+    {
+        <li>
+            <a href="/projects/@project.Id">@project.Name</a>
+        </li>
+    }
+</ul>
+
